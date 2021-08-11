@@ -24,6 +24,10 @@
         type: String,
         default: 'contextmenu',
       },
+      clickoutside: {
+        type: String,
+        default: 'click'
+      },
       theme: {
         type: String,
         default: 'default',
@@ -65,11 +69,11 @@
         if (value) {
           this.$emit('show', this)
 
-          document.body.addEventListener('click', this.handleBodyClick)
+          document.body.addEventListener(this.clickoutside, this.handleBodyClick)
         } else {
           this.$emit('hide', this)
 
-          document.body.removeEventListener('click', this.handleBodyClick)
+          document.body.removeEventListener(this.clickoutside, this.handleBodyClick)
         }
       },
     },
@@ -91,7 +95,7 @@
         ref.el.removeEventListener(this.eventType, this.handleReferenceContextmenu)
       })
 
-      document.body.removeEventListener('click', this.handleBodyClick)
+      document.body.removeEventListener(this.clickoutside, this.handleBodyClick)
     },
 
     methods: {
