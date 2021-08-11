@@ -3,8 +3,8 @@
   "description": "ContextMenu based on Vue 2.0",
   "version": "2.9.0",
   "author": "heynext <heynext.xyz@gmail.com>",
-  "main": "dist/index.common.js",
-  "module": "dist/index.esm.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "files": [
     "src",
     "dist"
@@ -36,7 +36,7 @@
     "eslint-plugin-vue": "^6.0.1",
     "file-loader": "^5.0.0",
     "gh-pages": "^2.1.0",
-    "rollup": "^1.27.0",
+    "rollup": "^2.56.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy": "^3.1.0",
     "rollup-plugin-terser": "^5.1.3",
